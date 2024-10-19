@@ -32,17 +32,15 @@ public class MainActivity extends AppCompatActivity {
         });
 
         countries = new ArrayList<Country>();
-        countries.add(new Country(R.drawable.india, "India","New Delhi"));
-        countries.add(new Country(R.drawable.china, "China","Beijing"));
-        countries.add(new Country(R.drawable.us, "United States","Washington DC"));
-        countries.add(new Country(R.drawable.indonesia, "Indonesia","Jakarta"));
-        countries.add(new Country(R.drawable.pakistan, "Pakistan","Islamabad"));
-        countries.add(new Country(R.drawable.nigeria, "Nigeria","Abuja"));
-        countries.add(new Country(R.drawable.brazil, "Brazil","Brasila"));
-        countries.add(new Country(R.drawable.bangladesh, "Bangladesh","Dhaka"));
-
+        countries.add(new Country(R.drawable.china, "China", "Beijing", "1,411 million people", "9,596,961 Km²", "148 people/Km²", "18.47%"));
+        countries.add(new Country(R.drawable.us, "United States", "Washington, D.C.", "331 million people", "9,525,067 Km²", "35 people/Km²", "4.27%"));
+        countries.add(new Country(R.drawable.indonesia, "Indonesia", "Jakarta", "273 million people", "1,904,569 Km²", "143 people/Km²", "3.61%"));
+        countries.add(new Country(R.drawable.pakistan, "Pakistan", "Islamabad", "225 million people", "881,913 Km²", "255 people/Km²", "2.78%"));
+        countries.add(new Country(R.drawable.nigeria, "Nigeria", "Abuja", "206 million people", "923,768 Km²", "223 people/Km²", "2.60%"));
+        countries.add(new Country(R.drawable.brazil, "Brazil", "Brasília", "213 million people", "8,515,767 Km²", "25 people/Km²", "4.92%"));
+        countries.add(new Country(R.drawable.bangladesh, "Bangladesh", "Dhaka", "166 million people", "147,570 Km²", "1,126 people/Km²", "1.93%"));
         rcvcountries = (RecyclerView) findViewById(R.id.rcvcountries);
-        rcvcountries.setAdapter(new CountryAdapter(countries));
+        rcvcountries.setAdapter(new CountryAdapter(countries,this));
         rcvcountries.setLayoutManager(new LinearLayoutManager(this));
         rcvcountries.setHasFixedSize(true);
     }
