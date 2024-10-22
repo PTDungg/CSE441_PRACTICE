@@ -16,6 +16,7 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
     String namephone[] = {"Điện thoại Iphone 12", "Điện thoại Samsung S20", "Điện thoại VivoS1", "Điện thoại Bphone", "Điện thoại Oppo 5", "Điện thoại VSmart"};
+    String pricephone[] = {"6000000","7000000","5000000","6000000","5000000","2000000","6000000","7000000","5000000","6000000","5000000","2000000"};
     int imgphone[] = {R.drawable.ip12, R.drawable.samsungs20, R.drawable.vivos1, R.drawable.bphone, R.drawable.oppo, R.drawable.vsmart};
     ArrayList<Phone> mListPhone; //Khai bao mang chinh
     PhoneAdapter phoneAdapter;
@@ -29,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         lv = findViewById(R.id.lv);
         mListPhone = new ArrayList<>();
         for (int i = 0; i<namephone.length;i++){
-            mListPhone.add(new Phone(imgphone[i],namephone[i]));
+            mListPhone.add(new Phone(imgphone[i],namephone[i],pricephone[i]));
         }
 
         phoneAdapter = new PhoneAdapter(this,R.layout.layout_listview, mListPhone);

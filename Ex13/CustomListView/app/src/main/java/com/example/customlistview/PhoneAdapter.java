@@ -39,10 +39,12 @@ public class PhoneAdapter extends ArrayAdapter<Phone> {
             // Gan id
         ImageView imgphone = convertView.findViewById(R.id.imgphone);
         TextView txtnamephone = convertView.findViewById(R.id.txtnamephone);
+        TextView txtpricephone = convertView.findViewById(R.id.txtpricephone);
 
             //Thiet lap du lieu
         imgphone.setImageResource(myphone.getImgphone());
         txtnamephone.setText(myphone.getNamephone());
+        txtpricephone.setText("Gia ban: "+myphone.getPricephone());
 
         return convertView;
     }
